@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  mongo:
+    restart: always
+    container_name: "mongo"
+    build:
+      context: .
+      dockerfile: .
+    image: ws-mongo-demo:latest
+    ports:
+      - "27017:27017"
